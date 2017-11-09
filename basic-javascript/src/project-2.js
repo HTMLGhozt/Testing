@@ -85,6 +85,7 @@ const incrementByOne = (arr) => {
 };
 
 const addItemToArray = (arr, item) => {
+  if (item === undefined) return arr;
   arr.push(item);
   return arr;
 };
@@ -167,3 +168,23 @@ module.exports = {
   averageTestScore,
   largestNumber
 };
+/*
+  getBiggest
+  greeting
+  isTenOrFive
+  isInRange
+  isInteger
+  fizzBuzz
+  isPrime
+  returnFirst
+  returnLast
+  getArrayLength
+  incrementByOne
+  addItemToArray
+  addItemToFront
+  wordsToSentence
+  contains
+  addNumbers
+  averageTestScore
+  largestNumber
+*/

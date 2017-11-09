@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 const chai = require('chai');
 
 const assert = chai.assert;
@@ -46,12 +47,13 @@ describe('Project-1 Functions', () => {
     });
     it('"5" should equal "0"', () => {
       const subtractFive = funcs.subtractFive;
-      expect(subtractFive(5)).to.be.equal(0);
+      expect(subtractFive(5)).to.equal(0);
     });
     it('should accept random number inputs', () => {
       const subtractFive = funcs.subtractFive;
       for (let i = 0; i < 5; i++) {
         const x = parseInt(Math.random() * 100, 10);
+        expect(subtractFive(x)).to.equal(x - 5);
       }
     });
   });
@@ -202,7 +204,7 @@ describe('Project-1 Functions', () => {
     });
     it('expect division by 0 to return NaN', () => {
       const divide = funcs.divide;
-      expect(divide(5, 0)).to.not.be.finite;
+      expect(divide(5, 0)).to.be.not.finite;
     });
   });
 
@@ -275,7 +277,7 @@ describe('Project-1 Functions', () => {
       const isOdd = funcs.isOdd;
       for (let i = 0; i < 10; i++) {
         const x = Math.floor(Math.random() * 100);
-        expect(isOdd(x)).to.equal(x % 2 !== 0); 
+        expect(isOdd(x)).to.equal(x % 2 !== 0);
       }
     });
   });
@@ -408,7 +410,7 @@ describe('Project-1 Functions', () => {
       const addExclamationPoint = funcs.addExclamationPoint;
       for (let i = 0; i < 10; i++) {
         const x = Math.random().toString(36).substring(7);
-        expect(addExclamationPoint(x)).to.equal(x + '!');
+        expect(addExclamationPoint(x)).to.equal(`${x}!`);
       }
     });
   });
@@ -464,7 +466,7 @@ describe('Project-1 Functions', () => {
     it('should work', () => {
       const getRectangleArea = funcs.getRectangleArea;
       expect(getRectangleArea(5, 5)).to.equal(25);
-    })
+    });
   });
 
   describe('`getTriangleArea`', () => {
