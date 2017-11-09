@@ -107,3 +107,19 @@ module.exports = {
   sumUserPostLikes,
   addCalculateDiscountPriceMethod
 };
+/*
+  makeCat
+  addProperty
+  invokeMethod
+  multiplyMysteryNumberByFive
+  deleteProperty
+  newUser
+  hasEmail
+  hasProperty
+  verifyPassword
+  updatePassword
+  addFriend
+  setUsersToPremium
+  sumUserPostLikes
+  addCalculateDiscountPriceMethod
+*/
